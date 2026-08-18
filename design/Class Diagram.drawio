@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" version="24.0.0">
+  <diagram name="Class Diagram" id="class1">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="guestClass" value="Guest" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="guestAttrs" value="guestID&#10;name&#10;email&#10;phone" style="text;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="guestClass">
+          <mxGeometry y="26" width="180" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="roomClass" value="Room" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="60" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="roomAttrs" value="roomID&#10;type&#10;price&#10;status" style="text;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="roomClass">
+          <mxGeometry y="26" width="180" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="bookingClass" value="Booking" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="240" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="bookingAttrs" value="bookingID&#10;checkInDate&#10;checkOutDate&#10;status" style="text;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="bookingClass">
+          <mxGeometry y="26" width="180" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="paymentClass" value="Payment" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="440" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="paymentAttrs" value="paymentID&#10;amount&#10;method" style="text;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="paymentClass">
+          <mxGeometry y="26" width="180" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="1        0..*" style="endArrow=none;html=1;" edge="1" parent="1" source="guestClass" target="bookingClass">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="1        0..*" style="endArrow=none;html=1;" edge="1" parent="1" source="roomClass" target="bookingClass">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="1        1" style="endArrow=none;html=1;" edge="1" parent="1" source="bookingClass" target="paymentClass">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
